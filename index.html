@@ -11,7 +11,24 @@
         <h1>Avengers Character Search</h1>
     </header>
     <main>
-        <button type="button" class="btn">Search</button>
+        <h3 id="info"> Search by Full Name or Alias</h3>
+        <form method="get" name="form" action="superheroes.php">
+            <div id="search-input">
+            <input type="text" name="search" id="search" placeholder="eg Captain America or Steve Rogers">
+            </div>
+            <button type="button" class="btn">Search</button>
+        </form>
+        
+        <h2 id="title">RESULT</h2>
+        <hr> 
+        <div id="result">
+           
+            <h3 id="alias"></h3>
+            <h4 id="name"></h4>
+            <p id="bio"></p>
+
+        </div>
+        
         
     </main>
 </body>
