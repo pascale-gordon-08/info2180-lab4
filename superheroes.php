@@ -65,22 +65,24 @@ $superheroes = [
 
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+
  
 <?php  
-//$clean = filter_var(search_value,FILTER_SANITIZE_STRING)
-$query= $_GET['search_value'];
+$query= (filter_var($_GET['query'],FILTER_SANITIZE_STRING))
 ?>
 
 
 <?php foreach($superheroes as $superhero): ?>
     <?php if ($superhero['alias']==$query):?>
-        <h3><?php echo $superhero['alias'];?> </h3>
-        <h4><?php echo $superhero['name'];?> </h4>
-        <p><?php echo $superhero['biography'];?> </p>
+        <h3><? $superhero['alias'];?> </h3>
+        <h4><? $superhero['name'];?> </h4>
+        <p><? $superhero['biography'];?> </p>
     <?php endif; ?>
     <?php endforeach; ?>
+
+
+<ul>
+<?php foreach ($superheroes as $superhero): ?>
+    <li><?= $superhero['alias']; ?></li>
+<?php endforeach; ?> 
+</ul>
